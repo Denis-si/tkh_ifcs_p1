@@ -1,8 +1,7 @@
-default via 192.168.1.1 dev enp0s1 proto dhcp src 192.168.1.60 metric 100 
-172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 linkdown 
-192.168.1.0/24 dev enp0s1 proto kernel scope link src 192.168.1.60 metric 100 
-192.168.1.1 dev enp0s1 proto dhcp scope link src 192.168.1.60 metric 100 
+default via 192.168.10.1 dev enp0s3
+10.0.2.0/24 dev enp0s3 proto kernel scope link src 10.0.2.15
+192.168.10.0/24 dev enp0s3 proto kernel scope link src 192.168.10.150
 
-21:05:12.123456 IP 192.168.10.50.44322 > 192.168.10.193.80: Flags [S], seq 12345678, win 64240, length 0
-21:05:12.123590 IP 192.168.10.193.80 > 192.168.10.50.44322: Flags [S.], seq 87654321, ack 12345679, win 65160, length 0
-21:05:12.123610 IP 192.168.10.50.44322 > 192.168.10.193.80: Flags [.], ack 1, win 502, length 0
+21:07:44.633674 IP 10.0.2.15.56760 > 142.251.211.174.80: Flags [S], seq 402918867, win 64240, options [mss 1460,sackOK,TS val 4088121473 ecr 0,nop,wscale 7], length 0
+21:07:44.647971 IP 142.251.211.174.80 > 10.0.2.15.56760: Flags [S.], seq 1392512001, ack 402918868, win 65535, options [mss 1460], length 0
+21:07:44.648278 IP 10.0.2.15.56760 > 142.251.211.174.80: Flags [.], ack 1, win 64240, length 0
