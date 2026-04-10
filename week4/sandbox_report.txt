@@ -1,0 +1,10 @@
+==================================================
+SESSION 10: SANDBOX DETONATION REPORT
+Operator: denis
+==================================================
+
+QUESTION 1: Did the ping to google.com succeed or fail in Host-Only mode?
+ANSWER: The ping failed, confirming the air-gap is active
+
+QUESTION 2: Why must a SOC analyst NEVER use "Bridged" mode when detonating unknown malware?
+ANSWER: Bridged mode places the VM on the same network as your physical devices. If malware runs in Bridged mode, it can scan your home network, access your printer, or infect other computers in your house.
