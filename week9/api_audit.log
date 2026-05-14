@@ -1,0 +1,18 @@
+==================================================
+SESSION 27: API SECURITY AUDIT LOG
+==================================================
+
+1. BOLA (ID SWAP) EXPLOITATION
+* Targeted User ID: [102]
+* Private Information Leaked: ["email":"boss@titan.com","name":"CISO","role":"Admin","secret";"TITAN_MASTER_KEY_2026"]
+
+2. BUSINESS LOGIC EXPLOITATION (DISCOUNT HUNTER)
+* Hidden Discount Code Discovered: [9912]
+* Method Used: [Captured a GET request to the checkout endpoint, than changed the HTTP method to POST. I then sent the request to Burp Intruder using a numbers payload set (9900-9999), I performed a brute-force attack and identified the correct code by monitoring the response length for anomalies.]
+
+3. REMEDIATION RECOMMENDATION
+* How would you fix the BOLA vulnerability?
+Answer: I whould implement the Broken Object Level Authorization (BOLA) checks in the code. The server should verify that the user requesting the profile is the owner of that profile or has the necessary administrative permissions before returning the data, rather than trusting the ID provided in the URL.
+
+* How would you fix the Brute-Force vulnerability in the discount field?
+Answer: I whould do the Rate Limiting or a cool down period on the chkecout API endpoint. This would detect and block an IP address or user account after a specific number of failed attempts, making a brute force attack mathematically impossible within a reasonalbe timeframe.
